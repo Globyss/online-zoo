@@ -1,0 +1,22 @@
+.nav-list {
+    @include flex;
+    gap: 58px;
+    font-weight: 500;
+    font-size: 16px;
+
+    
+    &__item {
+        .active {
+            color: $color-secondary;
+        }
+        :hover{
+            color: $color-secondary;
+        }
+    }
+    
+    
+    
+}
+
+
+

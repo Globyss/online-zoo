@@ -1,7 +1,9 @@
-@import './base/reset';
-
 @import './abstracts/mixins';
 @import './abstracts/variables';
+
+@import './base/reset';
+@import './base/utilities';
+@import './base/typograhpy';
 
 @import './components/buttons';
 

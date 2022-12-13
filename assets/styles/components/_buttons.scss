@@ -1,0 +1,56 @@
+.button {
+    display: block;
+    color: $color-white;
+    padding: 16px 0 16px 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    width: 298px;
+    background: linear-gradient(113.96deg, $color-secondary 1.49%, #FE9013 101.44%);
+    &_pill {
+        border-radius: 25px;
+    }
+
+    &_rounded {
+        border-radius: 5px;
+    }
+}
+
+.animal-card__button {
+    position: absolute;
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    top: calc(50% - 42px);
+    &:before{
+        content: ' ';
+        top: calc(50% - 5px);
+        left: calc(50% - 8px);
+        position: absolute;
+        width: 16px;
+        height: 10px;
+        background-image: url('../../assets/icons/button\ arrow.svg');
+        background-repeat: no-repeat;
+    }
+    &:last-child {
+        rotate: 180deg;
+    }
+    &-left {
+        left: -82px;
+    }
+
+    &-right {
+        right: -82px;
+    } 
+}
+
+.footer__submit-btn {
+    color: $color-green;
+    padding: 10px 39px 10px 39px;
+    background: $color-gray-light;
+    border: 1px solid $color-green;
+    border-radius: 5px;
+}
