@@ -85,6 +85,8 @@
 .animals-card {
     color: $color-black;
     position: relative;
+    
+
     .container {
         @include flex;
         flex-direction: column;
@@ -103,12 +105,45 @@
         border: solid 1px #FE9013;
         border-radius: 5px;
         margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+
+        &:hover { 
+            .animals-card__image img{
+                transition: 0.5s;
+                transform: scale(110%);
+                z-index: 1;
+            }
+            .overlay{
+                z-index: 999;
+                position: absolute;
+                border-radius: 5px;
+                width: 100%;
+                height: 100%;
+                background: rgba($color: #000000, $alpha: 0.5);
+                transition: 0.5s;
+            }
+
+            .animals-card__content {
+                transform: translateY(-205px);
+                color: $color-white;
+                text-align: center;
+                transition: 0.5s;
+                z-index: 999;
+            }
+
+            .animals-card__icon {
+                display: none;
+            }
+        
+            
+        }
     }
 
     &__image {
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-
+        overflow: hidden
     }
 
     &__description {
@@ -116,7 +151,9 @@
         padding: 8px 0 14px 16px;
     }
 
-    // &__content {}
+    &__content {
+        flex: 2;
+    }
 
     &__title {
         text-transform: uppercase;

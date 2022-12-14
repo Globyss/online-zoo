@@ -54,3 +54,41 @@
     border: 1px solid $color-green;
     border-radius: 5px;
 }
+
+.radio-buttons {
+    @include flex(center, center);
+    gap: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: $color-primary;
+    padding-top: 25px;
+
+    .monthly {
+        cursor: pointer;
+
+        div {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid #FE9013;
+            vertical-align: text-top;
+            margin-right: 10px;
+        }
+    }
+
+    .once {
+        cursor: pointer;
+
+        div {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid #FE9013;
+            vertical-align: text-top;
+            margin-right: 10px;
+        }
+    }
+}

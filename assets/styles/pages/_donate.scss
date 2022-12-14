@@ -1,0 +1,210 @@
+.banner {
+    height: 390px;
+    background-image: url('../../assets/images/banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.help {
+    color: $color-white;
+    background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    padding-bottom: 180px;
+    
+    &__title {
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 130%;
+        padding: 40px 0 10px 0;
+    }
+
+    &__description {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+    }
+}
+
+.donation-information {
+
+    &__title {
+        color: $color-secondary;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 130%;
+        padding: 40px 0 60px 0;
+    }
+}
+
+.pick-and-feed {
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    padding: 40px 92px 62px 92px;
+
+    &__title {
+        color: $color-secondary;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 120%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    &__subtitle {
+        color: $color-primary;
+        font-weight: 400;
+        font-size: 24px;    
+        line-height: 120%;
+    }
+
+    &__content {
+        @include flex(center, center);
+
+        .amount-of-days-donate {
+            width: 284px;
+            
+            .number {
+                position: relative;
+                font-weight: 500;
+                font-size: 72px;
+                line-height: 80%;
+                text-align: center;
+                text-transform: uppercase;
+                color: $color-black;
+                &::after {
+                    left: 75%;
+                    top: 50%;
+                    position: absolute;
+                    content: "";
+                    background: url("../../assets/icons/x_icon.svg");
+                    width: 14px;
+                    height: 14px;
+                }
+
+            }
+            p {
+                padding-top: 11px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+                text-align: center;
+                color: $color-primary;
+            }
+        }
+    }
+
+    .caption {
+        padding: 48px 0 10px 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $color-black;
+    }
+
+    .progress-bar {
+
+        &__background {
+            position: relative;
+            background: #404950;
+            border-radius: 2px;
+            height: 27px;
+            width: 100%;
+            padding: 8px 30px 9px 26px;
+            @include flex(center, space-between);
+            z-index: 2;
+        }
+
+        &__point {
+            position: relative;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $color-yellow;
+            z-index: 2;
+
+            .price {
+                position: absolute;
+                font-weight: 500;
+                font-size: 26px;
+                line-height: 140%;
+                text-transform: uppercase;
+                color: $color-primary;
+                top: 30px;
+                left: -12px;
+                
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background: url("../../assets/icons/dollar-icon.svg");
+                    width: 10px;
+                    height: 20px;
+                    left: -12px;
+                    top: 10px;
+                }
+            }
+        }
+
+        &__line {
+            z-index: -1;
+            background: #72828E;
+            position: absolute;
+            height: 2px;
+            width: calc(100% - 56px);
+            top: calc(50% - 1px)
+        }
+
+        &__icon {
+            position: absolute;
+            left: -15px;
+            top: -20px;
+
+        }
+
+        &__input {
+            margin-top: 92px;
+            @include flex(center, center);
+            color: #929699;
+
+            label {
+                position: relative;
+
+                input {
+                    background: transparent;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                    border: 1px solid #929699;
+                    border-radius: 2px;    
+                    padding: 16px 20px 16px 9px; 
+                    width: 268px;
+    
+                }
+    
+                p {
+                    position: absolute;
+                    right: 10px;
+                    top: calc(50% - 10px);
+                    font-size: 20px;
+                }
+            }
+
+            
+            
+        }
+    }
+    .feed-button {
+        @include flex(center, center);
+        padding: 31px 0 30px 0;
+    }
+
+    &__bottom {
+        @include flex(center,center);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $color-primary;
+
+    }
+}
