@@ -184,6 +184,9 @@ body {
 .button_rounded {
   border-radius: 5px;
 }
+.button:hover {
+  background: #d77302;
+}
 
 .animal-card__button {
   position: absolute;
@@ -439,6 +442,7 @@ body {
 }
 .nav-list__item .active {
   color: #f9804b;
+  pointer-events: none;
 }
 .nav-list__item :hover {
   color: #f9804b;
@@ -780,6 +784,7 @@ body {
   border-radius: 5px;
   border: 0.5px solid rgba(254, 189, 171, 0.7411764706);
   margin: 21px auto 31px auto;
+  cursor: pointer;
 }
 .testimonials__scroll .progress {
   width: 116px;

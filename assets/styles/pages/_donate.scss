@@ -110,9 +110,14 @@
             border-radius: 2px;
             height: 27px;
             width: 100%;
-            padding: 8px 30px 9px 26px;
+            padding: 8px 30px 9px 12px;
             @include flex(center, space-between);
             z-index: 2;
+        }
+
+        &__button {
+            background: transparent;
+            padding: 12px 14px 12px 14px;
         }
 
         &__point {
@@ -123,6 +128,7 @@
             border-radius: 50%;
             background: $color-yellow;
             z-index: 2;
+            cursor: pointer;
 
             .price {
                 position: absolute;
@@ -151,7 +157,8 @@
             background: #72828E;
             position: absolute;
             height: 2px;
-            width: calc(100% - 56px);
+            width: calc(100% - 72px);
+            left: 26px;
             top: calc(50% - 1px)
         }
 
@@ -179,7 +186,6 @@
                     border-radius: 2px;    
                     padding: 16px 20px 16px 9px; 
                     width: 268px;
-    
                 }
     
                 p {

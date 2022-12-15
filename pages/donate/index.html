@@ -10,14 +10,14 @@
 <body>
     <div class="header">
         <div class="container">
-            <a class="logo">
+            <a class="logo" href="../main/index.html">
                 <img src="../../assets/icons/bamboo.svg" alt="bamboo" class="logo__image">
                 <h1 class="logo__text">Pet Story online</h1>
             </a>
             <nav class="header__nav">
                 <ul class="nav-list">
                     <li class="nav-list__item">
-                        <a href="#" class="nav-list__link active">About</a>
+                        <a href="../main/index.html" class="nav-list__link active">About</a>
                     </li>
                     <li class="nav-list__item">
                         <a href="#" class="nav-list__link">Map</a>
@@ -67,43 +67,65 @@
                         <div class="caption">Amount</div>
                         <div class="progress-bar">
                             <div class="progress-bar__background">
-                                <div class="progress-bar__point">
-                                    <div class="price">5000</div>
-                                </div>
-                                <div class="progress-bar__point">
-                                    <div class="price">2000</div>
-                                </div>
-                                <div class="progress-bar__point">
-                                    <div class="price">1000</div>
-                                </div>
-                                <div class="progress-bar__point">
-                                    <div class="price">500</div>
-                                </div>
-                                <div class="progress-bar__point">
-                                    <div class="price">250</div>
-                                </div>
-                                <div class="progress-bar__point">
-                                    <div class="price">100</div>
-                                </div>
-                                <div class="progress-bar__point">
-                                    <div class="price">50</div>
-                                </div>
-                                <div class="progress-bar__point">
-                                    <div class="price">25</div>
-                                </div>
+                                <button type="button" class="progress-bar__button">
+                                    <div class="progress-bar__point">
+                                        <div class="price">5000</div>
+                                    </div>
+                                </button>
+                                <button type="button" class="progress-bar__button">
+                                    <div class="progress-bar__point">
+                                        <div class="price">2000</div>
+                                    </div>
+                                </button>
+                                <button type="button" class="progress-bar__button">
+                                    <div class="progress-bar__point">
+                                        <div class="price">1000</div>
+                                    </div>
+                                </button>
+                                <button type="button" class="progress-bar__button">
+                                    <div class="progress-bar__point">
+                                        <div class="price">500</div>
+                                    </div>
+                                </button>
+                                <button type="button" class="progress-bar__button">
+                                    <div class="progress-bar__point">
+                                        <div class="price">250</div>
+                                    </div>
+                                </button>
+                                <button type="button" class="progress-bar__button">
+                                    <div class="progress-bar__point">
+                                        <div class="price">100</div>
+                                    </div>
+                                </button>
+                                <button type="button" class="progress-bar__button">
+                                    <div class="progress-bar__point">
+                                        <div class="price">50</div>
+                                    </div>
+                                </button>
+                                <button type="button" class="progress-bar__button">
+                                    <div class="progress-bar__point">
+                                        <div class="price">25</div>
+                                    </div>
+                                </button>
                                 <div class="progress-bar__line">
                                     <img src="../../assets/icons/roller_icon.svg" alt="roller_icon" class="progress-bar__icon">
                                 </div>
                             </div>
                             <div class="progress-bar__input">
                                 <label for="amount">
-                                    <input name="amount" placeholder="Another amount" type="number">
+                                    <input name="amount" placeholder="Another amount" type="number" min="0" max="9999" maxlength="4">
                                     <p>$</p>
                                 </label>
                             </div>
                             <div class="radio-buttons">
-                                <div class="monthly"><div></div>Monthly</div>
-                                <div class="once"><div></div>Once</div>
+                                <label>
+                                    <input type="radio" class="monthly" name="radio">
+                                    <span>Monthly</span>
+                                </label>
+                                <label>
+                                    <input type="radio" class="once" name="radio" >
+                                    <span>Once</span>
+                                </label>
                             </div>
                         </div>
                         <div class="feed-button">
@@ -119,7 +141,7 @@
         <div class="container">
             <div class="footer__top">
                 <div class="footer__left">
-                    <a class="logo">
+                    <a class="logo" href="#">
                         <img src="../../assets/icons/bamboo.svg" alt="bamboo" class="logo__image">
                         <h1 class="logo__text">Pet Story online</h1>
                     </a>

@@ -8,6 +8,7 @@
     &__item {
         .active {
             color: $color-secondary;
+            pointer-events: none;
         }
         :hover{
             color: $color-secondary;

@@ -16,6 +16,9 @@
     &_rounded {
         border-radius: 5px;
     }
+    &:hover {
+        background: #d77302;
+    }
 }
 
 .animal-card__button {
@@ -63,32 +66,27 @@
     line-height: 140%;
     color: $color-primary;
     padding-top: 25px;
-
-    .monthly {
-        cursor: pointer;
-
-        div {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            border: 1px solid #FE9013;
-            vertical-align: text-top;
-            margin-right: 10px;
-        }
+    position: relative;
+   
+    input[type=radio] {
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: 1px solid $color-secondary;
+        background-color: transparent;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #f9804b;
+        margin-right: 10px;
     }
 
-    .once {
-        cursor: pointer;
+    input[type=radio]:checked {
+        background: $color-secondary;
+        background-clip: content-box;
+    }
 
-        div {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            border: 1px solid #FE9013;
-            vertical-align: text-top;
-            margin-right: 10px;
-        }
+    label {
+        @include flex(center, center);
     }
 }
