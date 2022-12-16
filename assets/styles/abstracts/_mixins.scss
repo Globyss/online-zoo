@@ -35,9 +35,14 @@
             @content;
         } 
     }
+    @if $breakpoint == 1439 {
+        @media (max-width: 1439px) {
+            @content;
+        } 
+    }
     @if $breakpoint == 1600 {
         @media (max-width: 1600px) {
             @content;
-        } 
+        }
     }
 }

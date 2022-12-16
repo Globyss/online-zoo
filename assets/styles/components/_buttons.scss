@@ -19,6 +19,10 @@
     &:hover {
         background: #d77302;
     }
+
+    &:active {
+        background-color: rgb(54, 147, 0);
+    }
 }
 
 .animal-card__button {
@@ -28,6 +32,7 @@
     border-radius: 50%;
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     top: calc(50% - 42px);
+
     &:before{
         content: ' ';
         top: calc(50% - 5px);
@@ -43,11 +48,32 @@
     }
     &-left {
         left: -82px;
+
+        @media (max-width: 1440px) {
+            left: 35%;
+        }
+
     }
 
     &-right {
         right: -82px;
-    } 
+
+        @media (max-width: 1440px) {
+            right: 35%;
+        }
+    }
+
+    &:hover {
+        background: #d77302;
+    }
+
+    &:active {
+        background-color: rgb(54, 147, 0);
+    }
+
+    @include responsive(1439) {
+        top: calc(50% + 15px);
+    }
 }
 
 .footer__submit-btn {

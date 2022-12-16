@@ -5,9 +5,13 @@
     backdrop-filter: blur(2px);
     color: $color-white;
     font-weight: 500;
+
     .container {
         @include flex;
-        padding: 14px 0;
+        padding-top: 14px;
+        padding-bottom: 14px;
+
+        
     }
     &__nav {
         margin-left: 63px;

@@ -2,7 +2,12 @@
     transform: translateY(-80px);
     color: $color-white;
     background-image: url('../../assets/images/banner.png');
+    background-size: cover;
     padding: 166px 0 100px 0;
+
+    @include responsive (sm-desktop) {
+        padding: 122px 0 47px 0;
+    }
 
     &__circle {
         z-index: -1;
@@ -13,6 +18,13 @@
         width: 465px;
         height: 465px;
         border-radius: 50%;
+
+        @include responsive (sm-desktop) {
+            width: 367px;
+            height: 367px;
+            left: -58px;
+            top: -54px;
+        }
     }
     span {
         color: $color-yellow;
@@ -30,32 +42,82 @@
         z-index: 1;
         @include flex;
         flex-direction: column;
+
+        @include responsive (sm-desktop) {
+            font-size: 85px;
+            width: 400px;
+        }
     }
 
     &__text {
         padding-bottom: 60px;
+
+        @include responsive (sm-desktop) {
+            padding-bottom: 40px;
+        }
     }
 }
 
 .backstage {
     color: $color-primary;
     padding-top: 80px;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+
+    @include responsive (sm-desktop) {
+        padding-top: 20px;
+    }
 
     .container {
         @include flex(center, space-between);
         padding-bottom: 180px;
+        
+        @include responsive(1439) {
+            padding-bottom: 50px;
+        }
     }
 
     .flower-decoration {
         position: absolute;
-        right: 0;
+        right: 0px;
+        top: 0px;
+        @media (max-width: 1520px) {
+            transform: translateX(50px);
+        }        
+        @media (max-width: 1390px) {
+            transform: translateX(100px);
+        }        
+        @media (max-width: 1389px) {
+            display: none;
+        }        
     }
 
-    // &__image {}
+    &__image {
+        @include responsive(1439) {
+            width: 55%;
+            margin-right: 31px;
+        }
+
+        @include responsive (sm-desktop) {
+            margin-right: 31px;
+            height: 408px;
+            width: 455px;
+            object-fit: cover;
+        }
+    }
 
     &__content {
-        // padding-left: 87px;
         max-width: 465px;
+        @media (min-width: 1601px) {
+            margin-right: 120px;
+            max-width: none;
+            padding-left: 87px;
+
+        @include responsive (sm-desktop) {
+            width: 454px;
+        }
+        }
     }
 
     &__title {
@@ -85,6 +147,9 @@
 .animals-card {
     color: $color-black;
     position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
     
 
     .container {
@@ -92,6 +157,9 @@
         flex-direction: column;
         padding-bottom: 100px;
 
+        @include responsive (sm-desktop) {
+            padding-bottom: 140px;
+        }
     }
 
     &__list {
@@ -99,6 +167,14 @@
         flex-wrap: wrap;
         position: relative;
         margin-bottom: 60px;
+
+        @media (min-width: 1601px) {
+            margin: 0 160px 0 135px;
+        }
+
+        @include responsive (sm-desktop) {
+            margin-bottom: 80px;
+        }
     }
 
     &__item {
@@ -107,6 +183,10 @@
         margin-bottom: 20px;
         position: relative;
         overflow: hidden;
+        
+        @include responsive(1439) {
+            margin: 92px 0 0 0;
+        }
 
         &:hover { 
             .animals-card__image img{
@@ -143,7 +223,14 @@
     &__image {
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
-        overflow: hidden
+        overflow: hidden;
+
+        @include responsive(1439) {
+            img {
+                width: 294px;
+                height: 294px;
+            }
+        }
     }
 
     &__description {
@@ -176,13 +263,32 @@
         position: absolute;
         left: 0px;
         bottom: 0px;
+        @media (max-width: 1599px) {
+            transform: translateX(-100px);
+        }
+        @media (max-width: 1390px) {
+            transform: translateX(-170px);
+        }
+        @media (max-width: 1389px) {
+            height: 202px;
+            transform: translateX(0px);
+        }
     }
 
     .strelitzia-decoration {
         position: absolute;
         right: 0px;
         bottom: 0px;
-
+        @media (max-width: 1599px) {
+            transform: translateX(100px);
+        }
+        @media (max-width: 1390px) {
+            transform: translateX(170px);
+        }
+        @media (max-width: 1389px) {
+            height: 180px;
+            transform: translateX(0px);
+        }
     }
 }
 
@@ -202,6 +308,12 @@
         margin-top: 69px;
         padding-left: 100px;
         margin-bottom: 100px;
+
+        @include responsive (sm-desktop) {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            padding-left: 49px;
+        }
     }
 
     &__title {
@@ -211,6 +323,10 @@
         font-size: 48px;
         line-height: 120%;
         color: #FE9013;
+
+        @include responsive (sm-desktop) {
+            padding: 30px 0 20px 0;
+        }
     }
 
     &__subtitle {
@@ -224,6 +340,10 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 130%;
+
+        @include responsive (sm-desktop) {
+            padding: 20px 0 10px 0;
+        }
     }
 
     &__subtext {
@@ -232,6 +352,11 @@
         line-height: 130%;
         padding-right: 198px;
         padding-bottom: 60px;
+
+        @include responsive (sm-desktop) {
+            padding-bottom: 40px;
+        }
+
         span {
             position: relative;
             &::after {
@@ -249,6 +374,10 @@
     &__button {
         @include flex(center, center);
         padding: 60px;
+
+        @include responsive (sm-desktop) {
+            padding: 70px 0 50px 0;
+        }
     }
 
     .how-it-works {
@@ -256,6 +385,10 @@
         font-weight: 400;
         font-size: 36px;
         line-height: 130%;
+
+        h3 {
+            padding-bottom: 40px
+        }
 
         &__list {
             @include flex(center, space-evenly);
@@ -272,6 +405,10 @@
                 height: 36px;
                 background-image: url('../../assets/icons/how\ it\ works\ arrow.svg');
                 background-repeat: no-repeat;
+
+                @include responsive (1439) {
+                    right: -80px;
+                }
             }
         }
 
@@ -300,9 +437,22 @@
 
 .testimonials {
     color: $color-primary;
+    position: relative;
 
     .container {
         padding-bottom: 180px;
+
+        @include responsive (sm-desktop) {
+            padding-bottom: 140px;
+        }
+
+        .leaf-decoration {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            transform: translateY(130px);
+            z-index: -1;
+        }
     }
 
     &__content {}
@@ -313,19 +463,37 @@
         font-size: 36px;
         line-height: 130%;
         text-align: center;
+
+        @include responsive (sm-desktop) {
+            padding: 100px 0 30px 0;
+        }
         
     }
 
     &__list {
-        @include flex(flex-start, space-between)
+        @include flex(flex-start, space-between);
+        gap: 30px;
+        overflow: hidden;
     }
 
     &__item {
         width: 268px;
-        // height: 391px;
+        height: 391px;
         background: #F1F3F2;
         border-radius: 20px;
         border: solid 2px #FEBDABBD;
+
+        @include responsive (sm-desktop){
+            flex-grow: 1;
+            &_hidden {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1439px) {
+            // flex-basis: 268px;
+            // flex-shrink: 0;
+        }
     }
 
     &__header {
@@ -352,7 +520,7 @@
         line-height: 120%;
         color: #BDBDBD;
 
-        .day {}
+        // .day {}
     }
 
     &__body {
@@ -377,6 +545,11 @@
         border: 0.5px solid #FEBDABBD;
         margin: 21px auto 31px auto;
         cursor: pointer;
+
+        @include responsive (sm-desktop) {
+        margin: 20px auto 52px auto;
+
+        }
 
         .progress {
             width: 116px;

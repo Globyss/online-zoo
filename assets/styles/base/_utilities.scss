@@ -3,6 +3,9 @@
     @include responsive(1600) {
         width: $container-width;
     }
+    @include responsive(1439) {
+        width: 980px;
+    }
     @include responsive(sm-desktop) {
         width: 940px;
     }

@@ -99,6 +99,11 @@ input[type=number] {
     width: 1160px;
   }
 }
+@media (max-width: 1439px) {
+  .container {
+    width: 980px;
+  }
+}
 @media (max-width: 1000px) {
   .container {
     width: 940px;
@@ -199,6 +204,9 @@ body {
 .button:hover {
   background: #d77302;
 }
+.button:active {
+  background-color: rgb(54, 147, 0);
+}
 
 .animal-card__button {
   position: absolute;
@@ -224,8 +232,29 @@ body {
 .animal-card__button-left {
   left: -82px;
 }
+@media (max-width: 1440px) {
+  .animal-card__button-left {
+    left: 35%;
+  }
+}
 .animal-card__button-right {
   right: -82px;
+}
+@media (max-width: 1440px) {
+  .animal-card__button-right {
+    right: 35%;
+  }
+}
+.animal-card__button:hover {
+  background: #d77302;
+}
+.animal-card__button:active {
+  background-color: rgb(54, 147, 0);
+}
+@media (max-width: 1439px) {
+  .animal-card__button {
+    top: calc(50% + 15px);
+  }
 }
 
 .footer__submit-btn {
@@ -405,7 +434,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 14px 0;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 .header__nav {
   margin-left: 63px;
@@ -450,6 +480,11 @@ body {
   font-weight: 500;
   font-size: 16px;
 }
+@media (max-width: 1000px) {
+  .nav-list {
+    gap: 48px;
+  }
+}
 .nav-list__item .active {
   color: #f9804b;
   pointer-events: none;
@@ -471,11 +506,21 @@ body {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
   padding-bottom: 180px;
 }
+@media (max-width: 1000px) {
+  .help {
+    padding-bottom: 30px;
+  }
+}
 .help__title {
   font-weight: 400;
   font-size: 36px;
   line-height: 130%;
   padding: 40px 0 10px 0;
+}
+@media (max-width: 1000px) {
+  .help__title {
+    padding: 40px 0 30px 0;
+  }
 }
 .help__description {
   font-weight: 400;
@@ -490,12 +535,22 @@ body {
   line-height: 130%;
   padding: 40px 0 60px 0;
 }
+@media (max-width: 1000px) {
+  .donation-information__title {
+    padding: 40px 0 40px 0;
+  }
+}
 
 .pick-and-feed {
   background: rgba(255, 255, 255, 0.52);
   backdrop-filter: blur(2px);
   border-radius: 20px;
   padding: 40px 92px 62px 92px;
+}
+@media (max-width: 1000px) {
+  .pick-and-feed {
+    padding: 20px 44px 46px 47px;
+  }
 }
 .pick-and-feed__title {
   color: #f9804b;
@@ -505,11 +560,17 @@ body {
   text-align: center;
   padding-bottom: 20px;
 }
+@media (max-width: 1000px) {
+  .pick-and-feed__title {
+    padding-bottom: 10px;
+  }
+}
 .pick-and-feed__subtitle {
   color: #333b41;
   font-weight: 400;
   font-size: 24px;
   line-height: 120%;
+  padding-bottom: 60px;
 }
 .pick-and-feed__content {
   display: flex;
@@ -552,6 +613,11 @@ body {
   line-height: 140%;
   color: black;
 }
+@media (max-width: 1000px) {
+  .pick-and-feed .caption {
+    padding: 48px 21px 10px 18px;
+  }
+}
 .pick-and-feed .progress-bar__background {
   position: relative;
   background: #404950;
@@ -563,6 +629,11 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 2;
+}
+@media (max-width: 1000px) {
+  .pick-and-feed .progress-bar__background {
+    margin: 0 21px 0 18px;
+  }
 }
 .pick-and-feed .progress-bar__button {
   background: transparent;

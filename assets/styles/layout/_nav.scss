@@ -4,6 +4,10 @@
     font-weight: 500;
     font-size: 16px;
 
+    @include responsive (sm-desktop) {
+        gap: 48px;
+    }
+
     
     &__item {
         .active {
