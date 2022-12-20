@@ -13,12 +13,21 @@
             padding-top: 12px;
         }
 
+        @include responsive (phone) {
+            padding-top: 20px;
+            justify-content: center;
+        }
+
     }
 
     &__left {
 
         @include responsive (tab) {
             padding-bottom: 32px;
+        }
+
+        @include responsive (phone) {
+            padding-bottom: 86px;
         }
 
         .logo {
@@ -29,6 +38,12 @@
             height: 52px;
             border: 1px solid $color-white;
             border-radius: 2px;
+
+            @include responsive (phone) {
+                height: auto;
+                width: auto;
+                border: none;
+            }
     
             &__text{
                 text-align: center;
@@ -43,6 +58,11 @@
                 left: 9px;
                 bottom: 6.4px;
                 height: auto;
+
+                @include responsive (phone) {
+                    left: 72px;
+                    top: -2px;
+                }
             }
         }
     }
@@ -91,8 +111,20 @@
             padding: 67px 0 12px 0;
         }
 
+        @include responsive (639) {
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 0 20px 0;
+            gap: 30px;
+        }
+
         .nav-list {
             font-weight: 400;
+
+            @include responsive (639) {
+                order: 1;
+                gap: 30px;
+            }
         }
 
         .social-list {
@@ -107,7 +139,14 @@
             @include responsive (tab) {
                 position: absolute;
                 top: 12px;
-                right: 0px; 
+                right: 2px; 
+            }
+
+            @include responsive (phone) {
+                gap: 30px;
+                flex-direction: row;
+                top: 73px;
+                left: 63px;
             }
 
             &__item {
@@ -190,6 +229,14 @@
             line-height: 130%;
             .author-name {
                 padding-bottom: 10px;
+
+                @include responsive (639) {
+                    padding-bottom: 13px;
+                }
+            }
+
+            @include responsive (639) {
+                margin-left: auto;
             }
         }
     }

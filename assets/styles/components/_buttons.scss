@@ -33,6 +33,10 @@
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
     top: calc(50% - 42px);
 
+    @include responsive (639) {
+        display: none;
+    }
+
     &:before{
         content: ' ';
         top: calc(50% - 5px);

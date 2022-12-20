@@ -15,6 +15,10 @@
         transform: translateY(0px);
     }
 
+    @include responsive (639) {
+
+    }
+
     &__circle {
         z-index: -1;
         left: -73px;
@@ -37,6 +41,13 @@
             height: 237px;
             left: -37px;
             top: -37px;
+        }
+
+        @include responsive (639) {
+            width: 119px;
+            height: 119px;
+            left: -19px;
+            top: -19px;
         }
     }
     span {
@@ -70,6 +81,17 @@
                 left: -348px;
             }
         }
+
+        @include responsive (639) {
+            width: 128px;
+            font-size: 28px;
+            line-height: 75%;
+            .button {
+                position: absolute;
+                bottom: -74px;
+                left: calc(-50vw - 10px);
+            }
+        }
     }
 
     &__text {
@@ -81,6 +103,10 @@
 
         @include responsive (tab) {
             padding-bottom: 86px;
+        }
+        
+        @include responsive (639) {
+            padding-bottom: 43px;
         }
     }
 }
@@ -98,6 +124,11 @@
     @include responsive (tab) {
         padding-top: 60px;
     }
+    
+    @include responsive (639) {
+        padding-top: 104px;
+        margin: 0 auto;
+    }
     .container {
         @include flex(center, space-between);
         padding-bottom: 180px;
@@ -108,6 +139,10 @@
         
         @include responsive(999) {
             padding-bottom: 18px;
+        }
+
+        @include responsive(999) {
+            padding-bottom: 0px;
         }
     }
 
@@ -129,7 +164,11 @@
             display: block;
             height: 476px;
             transform: translateX(0px);
-
+        }
+        
+        @include responsive (639) {
+            height: 217px;
+            transform: translate(40px, 38px);
         }
     }
 
@@ -168,8 +207,16 @@
         font-size: 48px;
         line-height: 120%;
 
+        @include responsive (639) {
+            font-size: 24px;
+        }
+
         h2 {
             padding-bottom: 20px;
+
+            @include responsive (639) {
+                padding-bottom: 10px;
+            }
         }
     }
 
@@ -183,6 +230,10 @@
             @include responsive (tab) {
                 padding: 30px 0 20px 0;
             }
+            
+            @include responsive (639) {
+                padding: 0px 0 10px 0;
+            }
         }
     }
 
@@ -192,6 +243,10 @@
 
         @include responsive (tab) {
             line-height: 130%;
+        }
+        
+        @include responsive (tab) {
+            padding-bottom: 20px;            
         }
     }
 }
@@ -221,6 +276,10 @@
         @include responsive (tab) {
             padding-bottom: 100px;
         }
+        
+        @include responsive (tab) {
+            padding-bottom: 60px;
+        }
     }
 
     &__list {
@@ -242,6 +301,12 @@
             gap: 26px;
             justify-content: center;
         }
+
+        @include responsive (639) {
+            flex-direction: column;
+            gap: 0px;
+            margin-bottom: 20px;
+        }
     }
 
     &__item {
@@ -257,6 +322,10 @@
 
         @include responsive (999) {
             margin: 62px 0 0 0;
+        }
+        
+        @include responsive (639) {
+            margin: 20px 0 0 0;
         }
 
         
@@ -371,6 +440,11 @@
             height: 202px;
             transform: translateX(0px);
         }
+
+        @include responsive (639) {
+            height: 72px;
+            transform: translateX(0px);
+        }
     }
 
     .strelitzia-decoration {
@@ -385,6 +459,11 @@
         }
         @media (max-width: 1389px) {
             height: 180px;
+            transform: translateX(0px);
+        }
+
+        @include responsive (639) {
+            height: 71px;
             transform: translateX(0px);
         }
     }
@@ -435,7 +514,11 @@
         }
         
         @include responsive (tab) {
-            padding: 10px 0 20px 0;
+            padding: 20px 0 10px 0;
+        }
+
+        @include responsive (phone) {
+            font-size: 24px;
         }
     }
 
@@ -443,6 +526,11 @@
         font-weight: 400;
         font-size: 24px;
         line-height: 120%;
+
+        @include responsive (phone) {
+            font-size: 18px;
+            text-align: center;
+        }
     }
 
     &__text {
@@ -453,6 +541,10 @@
 
         @include responsive (sm-desktop) {
             padding: 20px 0 10px 0;
+        }
+
+        @include responsive (phone) {
+            display: none;
         }
     }
 
@@ -469,6 +561,14 @@
         
         @include responsive (tab) {
             padding-bottom: 30px;
+        }
+        
+        @include responsive (tab) {
+            padding-right: 0px;
+        }
+
+        @include responsive (phone) {
+            display: none;
         }
 
         span {
@@ -496,6 +596,10 @@
         @include responsive (tab) {
             padding: 40px 0 60px 0;
         }
+        
+        @include responsive (phone) {
+            padding: 30px 0 40px 0;
+        }
     }
 
     .how-it-works {
@@ -510,6 +614,10 @@
             @include responsive (tab) {
                 padding-bottom: 20px;
             }
+
+            @include responsive (phone) {
+                padding-top: 20px;
+            }
         }
 
         &__list {
@@ -517,6 +625,12 @@
             
             @media (max-width: 900px) {
                 gap: 42px;
+            }
+
+            @include responsive (639) {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
             }
         }
 
@@ -551,6 +665,12 @@
                     right: -70px;
                     width: 90px;
                 }
+
+                @include responsive (639) {
+                    right: -60px;
+                    rotate: 90deg;
+                    top: 190px;
+                }
             }
         }
 
@@ -573,6 +693,11 @@
             font-size: 16px;
             line-height: 140%;
             max-width: 100%;
+
+            @include responsive (639) {
+                padding-top: 10px;
+                height: 54px;
+            }
         }
     }
 }
@@ -596,6 +721,14 @@
             }
         }
 
+        @include responsive (phone) {
+            padding-bottom: 60px;
+
+            .button {
+                margin: 30px auto 0 auto;
+            }
+        }
+
         .leaf-decoration {
             position: absolute;
             right: 0px;
@@ -606,6 +739,16 @@
             @include responsive (tab) {
                 width: 130px;
                 transform: translateY(75px);
+            }
+            
+            @include responsive (639) {
+                width: 90px;
+                transform: translateY(55px);
+            }
+
+            @include responsive (phone) {
+                width: 55px;
+                transform: translateY(30px);
             }
         }
     }
@@ -625,6 +768,10 @@
         
         @include responsive (tab) {
             padding: 60px 0 30px 0;
+        }
+        
+        @include responsive (639) {
+            padding: 30px 0 20px 0;
         }
         
     }
@@ -671,6 +818,10 @@
         @include responsive (tab) {
             padding: 15px 15px 12px 10px;
         }
+        
+        @include responsive (phone) {
+            padding: 10px 12px 10px 12px;
+        }
     }
 
     &__image {
@@ -708,6 +859,12 @@
 
         @include responsive (tab) {
             padding: 0 29px 8px 18px;
+            height: 38px;
+            overflow: hidden;
+        }
+        
+        @include responsive (phone) {
+            padding: 0 29px 12px 18px;
         }
     }
 

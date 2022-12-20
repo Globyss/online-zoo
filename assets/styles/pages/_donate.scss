@@ -80,6 +80,10 @@
     @include responsive (sm-desktop) {
         padding: 30px 0px 30px 0px;
     }
+    
+    @include responsive (639) {
+        padding: 20px 0px 20px 0px;
+    }
 
     &__title {
         color: $color-secondary;
@@ -96,6 +100,11 @@
         @include responsive (tab) {
             padding-bottom: 20px;
         }
+
+        @include responsive (639) {
+            font-size: 24px;
+            padding-bottom: 10px;
+        }
     }
 
     &__subtitle {
@@ -109,13 +118,18 @@
             text-align: center;
             padding-bottom: 50px;
         }
+
+        @include responsive (639) {
+            font-size: 16px;
+            padding-bottom: 10px;
+        }
     }
 
     &__content {
         @include flex(center, center);
 
         .amount-of-days-donate {
-            width: 284px;
+            width: 50%;
             
             .number {
                 position: relative;
@@ -125,6 +139,11 @@
                 text-align: center;
                 text-transform: uppercase;
                 color: $color-black;
+
+                @include responsive (639) {
+                    font-size: 40px;
+                }
+
                 &::after {
                     left: 75%;
                     top: 50%;
@@ -143,7 +162,18 @@
                 line-height: 140%;
                 text-align: center;
                 color: $color-primary;
+
+                @include responsive (639) {
+                    font-size: 9px;
+                }
             }
+        }
+    }
+
+    &__image {
+        @include responsive (639) {
+            width: 160px;
+            height: 138px;
         }
     }
 
@@ -161,7 +191,6 @@
         @include responsive (tab) {
             padding: 41px 0px 7px 10px;
         }
-        
     }
 
     .progress-bar {
@@ -188,6 +217,24 @@
         &__button {
             background: transparent;
             padding: 12px 14px 12px 14px;
+
+            @include responsive (sm-desktop) {
+                &:first-child {
+                    display: none;
+                }
+            }
+
+            @include responsive (tab) {
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+            
+            @include responsive (639) {
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
         }
 
         &__point {
@@ -210,10 +257,6 @@
                 top: 30px;
                 left: -12px;
 
-                @include responsive (999) {
-                    font-size: 22px;
-                }
-                
                 &::before {
                     position: absolute;
                     content: "";
@@ -222,10 +265,6 @@
                     height: 20px;
                     left: -12px;
                     top: 10px;
-                    
-                    @include responsive (999) {
-                        top: 5px;
-                    }
                 }
             }
         }
