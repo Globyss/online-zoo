@@ -3,10 +3,16 @@
     color: $color-white;
     background-image: url('../../assets/images/banner.png');
     background-size: cover;
+    background-position: center;
     padding: 166px 0 100px 0;
 
     @include responsive (sm-desktop) {
         padding: 122px 0 47px 0;
+    }
+    
+    @include responsive (tab) {
+        padding: 82px 0 0px 0;
+        transform: translateY(0px);
     }
 
     &__circle {
@@ -24,6 +30,13 @@
             height: 367px;
             left: -58px;
             top: -54px;
+        }
+        
+        @include responsive (tab) {
+            width: 237px;
+            height: 237px;
+            left: -37px;
+            top: -37px;
         }
     }
     span {
@@ -47,6 +60,16 @@
             font-size: 85px;
             width: 400px;
         }
+        
+        @include responsive (tab) {
+            font-size: 54px;
+            width: 255px;
+            .button {
+                position: absolute;
+                bottom: 40px;
+                left: -348px;
+            }
+        }
     }
 
     &__text {
@@ -55,13 +78,16 @@
         @include responsive (sm-desktop) {
             padding-bottom: 40px;
         }
+
+        @include responsive (tab) {
+            padding-bottom: 86px;
+        }
     }
 }
 
 .backstage {
     color: $color-primary;
     padding-top: 80px;
-    width: 100vw;
     position: relative;
     overflow: hidden;
 
@@ -69,12 +95,19 @@
         padding-top: 20px;
     }
 
+    @include responsive (tab) {
+        padding-top: 60px;
+    }
     .container {
         @include flex(center, space-between);
         padding-bottom: 180px;
         
         @include responsive(1439) {
             padding-bottom: 50px;
+        }
+        
+        @include responsive(999) {
+            padding-bottom: 18px;
         }
     }
 
@@ -90,13 +123,24 @@
         }        
         @media (max-width: 1389px) {
             display: none;
-        }        
+        }     
+
+        @include responsive (999) {
+            display: block;
+            height: 476px;
+            transform: translateX(0px);
+
+        }
     }
 
     &__image {
         @include responsive(1439) {
             width: 55%;
             margin-right: 31px;
+        }
+
+        @include responsive (999) {
+            display: none;
         }
 
         @include responsive (sm-desktop) {
@@ -135,12 +179,20 @@
 
         h4 {
             padding: 54px 0 34px 0;
+
+            @include responsive (tab) {
+                padding: 30px 0 20px 0;
+            }
         }
     }
 
     &__description {
         font-size: 16px;
         line-height: 140%;
+
+        @include responsive (tab) {
+            line-height: 130%;
+        }
     }
 }
 
@@ -151,6 +203,11 @@
     padding-right: 10px;
     overflow: hidden;
     
+    @include responsive (sm-desktop) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
 
     .container {
         @include flex;
@@ -159,6 +216,10 @@
 
         @include responsive (sm-desktop) {
             padding-bottom: 140px;
+        }
+        
+        @include responsive (tab) {
+            padding-bottom: 100px;
         }
     }
 
@@ -175,6 +236,12 @@
         @include responsive (sm-desktop) {
             margin-bottom: 80px;
         }
+        
+        @include responsive (999) {
+            margin-bottom: 60px;
+            gap: 26px;
+            justify-content: center;
+        }
     }
 
     &__item {
@@ -187,6 +254,12 @@
         @include responsive(1439) {
             margin: 92px 0 0 0;
         }
+
+        @include responsive (999) {
+            margin: 62px 0 0 0;
+        }
+
+        
 
         &:hover { 
             .animals-card__image img{
@@ -219,6 +292,11 @@
             
         }
     }
+    &__item_hidden {
+        @include responsive (999) {
+            display: none;
+        }
+    }
 
     &__image {
         border-top-left-radius: 5px;
@@ -231,12 +309,32 @@
                 height: 294px;
             }
         }
+
+        @media (max-width: 768px) {
+            img {
+                width: 283px;
+                height: 283px;
+            }
+        }
+
+        @include responsive(tab) {
+            img {
+                width: 285px;
+                height: 285px;
+            }
+        }
+
     }
 
     &__description {
         @include flex(center, space-between);
         padding: 8px 0 14px 16px;
+
+        @include responsive (tab) {
+            padding: 6px 0 11px 12px;
+        }
     }
+        
 
     &__content {
         flex: 2;
@@ -314,6 +412,14 @@
             margin-bottom: 50px;
             padding-left: 49px;
         }
+       
+        @include responsive (tab) {
+            width: 100vw;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     &__title {
@@ -326,6 +432,10 @@
 
         @include responsive (sm-desktop) {
             padding: 30px 0 20px 0;
+        }
+        
+        @include responsive (tab) {
+            padding: 10px 0 20px 0;
         }
     }
 
@@ -356,6 +466,10 @@
         @include responsive (sm-desktop) {
             padding-bottom: 40px;
         }
+        
+        @include responsive (tab) {
+            padding-bottom: 30px;
+        }
 
         span {
             position: relative;
@@ -378,6 +492,10 @@
         @include responsive (sm-desktop) {
             padding: 70px 0 50px 0;
         }
+        
+        @include responsive (tab) {
+            padding: 40px 0 60px 0;
+        }
     }
 
     .how-it-works {
@@ -387,11 +505,19 @@
         line-height: 130%;
 
         h3 {
-            padding-bottom: 40px
+            padding-bottom: 40px;
+
+            @include responsive (tab) {
+                padding-bottom: 20px;
+            }
         }
 
         &__list {
-            @include flex(center, space-evenly);
+            @include flex(flex-start, space-evenly);
+            
+            @media (max-width: 900px) {
+                gap: 42px;
+            }
         }
 
         &__item {
@@ -405,9 +531,25 @@
                 height: 36px;
                 background-image: url('../../assets/icons/how\ it\ works\ arrow.svg');
                 background-repeat: no-repeat;
+                z-index: 999;
 
+                @media (min-width: 1601px) {
+                    right: -130px;
+                }
+                
                 @include responsive (1439) {
                     right: -80px;
+                }
+                
+                @include responsive (999) {
+                    right: -75px;
+                }
+
+                @media (max-width: 900px) {
+                    background-image: url('../../assets/icons/pick-and-feed-arrow.svg');
+                    top: -15px;
+                    right: -70px;
+                    width: 90px;
                 }
             }
         }
@@ -446,12 +588,25 @@
             padding-bottom: 140px;
         }
 
+        @include responsive (tab) {
+            padding-bottom: 80px;
+
+            .button {
+                margin: 40px auto 0 auto;
+            }
+        }
+
         .leaf-decoration {
             position: absolute;
             right: 0px;
             bottom: 0px;
             transform: translateY(130px);
             z-index: -1;
+
+            @include responsive (tab) {
+                width: 130px;
+                transform: translateY(75px);
+            }
         }
     }
 
@@ -468,13 +623,22 @@
             padding: 100px 0 30px 0;
         }
         
+        @include responsive (tab) {
+            padding: 60px 0 30px 0;
+        }
+        
     }
 
     &__list {
         @include flex(flex-start, space-between);
         gap: 30px;
         overflow: hidden;
-    }
+
+        @include responsive (tab) {
+            align-items: center;
+            flex-direction: column;
+        }
+     }
 
     &__item {
         width: 268px;
@@ -482,6 +646,8 @@
         background: #F1F3F2;
         border-radius: 20px;
         border: solid 2px #FEBDABBD;
+        padding-bottom: 8px;
+        overflow-y: hidden;
 
         @include responsive (sm-desktop){
             flex-grow: 1;
@@ -490,15 +656,21 @@
             }
         }
 
-        @media (max-width: 1439px) {
-            // flex-basis: 268px;
-            // flex-shrink: 0;
+        @include responsive (tab) {
+            width: 100%;
+            height: 110px;
         }
+
+        
     }
 
     &__header {
         @include flex;
         padding: 15px 15px 11px 15px;
+
+        @include responsive (tab) {
+            padding: 15px 15px 12px 10px;
+        }
     }
 
     &__image {
@@ -532,8 +704,11 @@
         line-height: 120%;
         color: $color-gray;
         padding: 0 15px 0 15px;
-        overflow: hidden; 
         margin-bottom: 19px;
+
+        @include responsive (tab) {
+            padding: 0 29px 8px 18px;
+        }
     }
 
     &__scroll {
@@ -547,8 +722,11 @@
         cursor: pointer;
 
         @include responsive (sm-desktop) {
-        margin: 20px auto 52px auto;
+            margin: 20px auto 52px auto;
+        }
 
+        @include responsive (tab) {
+            display: none;
         }
 
         .progress {

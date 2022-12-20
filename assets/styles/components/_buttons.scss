@@ -52,7 +52,6 @@
         @media (max-width: 1440px) {
             left: 35%;
         }
-
     }
 
     &-right {
@@ -74,6 +73,10 @@
     @include responsive(1439) {
         top: calc(50% + 15px);
     }
+
+    @include responsive (999) {
+        top: 50%;
+    }
 }
 
 .footer__submit-btn {
@@ -93,6 +96,10 @@
     color: $color-primary;
     padding-top: 25px;
     position: relative;
+
+    @include responsive (tab) {
+        padding-top: 31px;
+    }
    
     input[type=radio] {
         -moz-appearance: none;

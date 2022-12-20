@@ -4,6 +4,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @include responsive (tab) {
+        padding-top: 34px;
+        height: 369px;
+    }
 }
 
 .help {
@@ -12,8 +17,11 @@
     padding-bottom: 180px;
 
     @include responsive (sm-desktop) {
-    padding-bottom: 30px;
-
+        padding-bottom: 30px;
+    }
+    
+    @include responsive (sm-desktop) {
+        padding-bottom: 46px;
     }
     
     &__title {
@@ -23,7 +31,13 @@
         padding: 40px 0 10px 0;
 
         @include responsive (sm-desktop) {
-        padding: 40px 0 30px 0;
+            padding: 40px 0 30px 0;
+        }
+
+        @include responsive (tab) {
+            font-size: 24px;
+            line-height: 120%;
+            padding: 30px 0 20px 0;
         }
     }
 
@@ -45,7 +59,11 @@
         
         @include responsive (sm-desktop) {
             padding: 40px 0 40px 0;
-            }
+        }
+        
+        @include responsive (sm-desktop) {
+            padding: 30px 0 30px 0;
+        }
     }
 }
 
@@ -57,7 +75,11 @@
     
     @include responsive (sm-desktop) {
         padding: 20px 44px 46px 47px;
-        }
+    }
+    
+    @include responsive (sm-desktop) {
+        padding: 30px 0px 30px 0px;
+    }
 
     &__title {
         color: $color-secondary;
@@ -70,6 +92,10 @@
         @include responsive (sm-desktop) {
             padding-bottom: 10px;
         }
+        
+        @include responsive (tab) {
+            padding-bottom: 20px;
+        }
     }
 
     &__subtitle {
@@ -78,6 +104,11 @@
         font-size: 24px;    
         line-height: 120%;
         padding-bottom: 60px;
+
+        @include responsive (tab) {
+            text-align: center;
+            padding-bottom: 50px;
+        }
     }
 
     &__content {
@@ -126,7 +157,11 @@
         @include responsive (sm-desktop) {
             padding: 48px 21px 10px 18px;
         }
-
+        
+        @include responsive (tab) {
+            padding: 41px 0px 7px 10px;
+        }
+        
     }
 
     .progress-bar {
@@ -143,6 +178,10 @@
 
             @include responsive (sm-desktop) {
                 margin: 0 21px 0 18px;
+            }
+            
+            @include responsive (sm-desktop) {
+                margin: 0;
             }
         }
 
@@ -170,6 +209,10 @@
                 color: $color-primary;
                 top: 30px;
                 left: -12px;
+
+                @include responsive (999) {
+                    font-size: 22px;
+                }
                 
                 &::before {
                     position: absolute;
@@ -179,6 +222,10 @@
                     height: 20px;
                     left: -12px;
                     top: 10px;
+                    
+                    @include responsive (999) {
+                        top: 5px;
+                    }
                 }
             }
         }
@@ -217,6 +264,11 @@
                     border-radius: 2px;    
                     padding: 16px 20px 16px 9px; 
                     width: 268px;
+
+                    @include responsive (tab) {
+                        padding: 10px 20px 10px 6px; 
+                        width: 180px;
+                    }
                 }
     
                 p {

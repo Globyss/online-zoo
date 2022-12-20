@@ -8,6 +8,10 @@
         gap: 48px;
     }
 
+    @include responsive (999) {
+        gap: 20px;
+    }
+
     
     &__item {
         .active {
@@ -18,9 +22,6 @@
             color: $color-secondary;
         }
     }
-    
-    
-    
 }
 
 

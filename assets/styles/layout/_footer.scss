@@ -1,19 +1,60 @@
 .footer {
     background: #111115;
 
-    .container {}
+    .container {
+        position: relative;
+    }
 
     &__top {
         @include flex(flex-start, space-between);
         padding-top: 40px;
 
+        @include responsive (tab) {
+            padding-top: 12px;
+        }
+
     }
 
-    &__left {}
+    &__left {
 
-    &__logo {}
+        @include responsive (tab) {
+            padding-bottom: 32px;
+        }
+
+        .logo {
+            @include flex;
+            position: relative;
+            color: $color-white;
+            width: 82px;
+            height: 52px;
+            border: 1px solid $color-white;
+            border-radius: 2px;
+    
+            &__text{
+                text-align: center;
+                font-style: normal;
+                font-weight: normal !important;
+                font-size: 19px !important;
+                line-height: 120%;
+            }
+    
+            &__image {
+                position: absolute;
+                left: 9px;
+                bottom: 6.4px;
+                height: auto;
+            }
+        }
+    }
+
+    
 
     .subscription {
+
+        @include responsive (tab) {
+            display: none;
+        }
+
         h3 {
             color: $color-white;
             font-weight: 400;
@@ -45,6 +86,11 @@
         color: $color-white;
         padding: 44px 0 50px 0;
         @include flex(flex-end, space-between);
+
+        @include responsive (tab) {
+            padding: 67px 0 12px 0;
+        }
+
         .nav-list {
             font-weight: 400;
         }
@@ -58,9 +104,21 @@
             flex-direction: column;
             gap: 10px;
 
+            @include responsive (tab) {
+                position: absolute;
+                top: 12px;
+                right: 0px; 
+            }
+
             &__item {
 
                 .social-link {
+
+                    @include responsive (tab) {
+                        span {
+                            font-size: .1px;
+                        }
+                    }
                     
                     .social-icon {
                         background-color: rgba(196, 196, 196, 0.5);
