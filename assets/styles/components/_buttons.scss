@@ -104,6 +104,11 @@
     @include responsive (tab) {
         padding-top: 31px;
     }
+    
+    @include responsive (phone) {
+        padding-top: 27px;
+    }
+
    
     input[type=radio] {
         -moz-appearance: none;

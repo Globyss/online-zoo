@@ -9,6 +9,11 @@
         padding-top: 34px;
         height: 369px;
     }
+    
+    @include responsive (phone) {
+        padding-top: 34px;
+        height: 187px;
+    }
 }
 
 .help {
@@ -63,6 +68,10 @@
         
         @include responsive (sm-desktop) {
             padding: 30px 0 30px 0;
+        }
+        
+        @include responsive (phone) {
+            font-size: 24px;
         }
     }
 }
@@ -166,6 +175,11 @@
                 @include responsive (639) {
                     font-size: 9px;
                 }
+                
+                @include responsive (phone) {
+                    font-size: 9px;
+                    padding-top: 6px;
+                }
             }
         }
     }
@@ -257,6 +271,10 @@
                 top: 30px;
                 left: -12px;
 
+                @include responsive (phone) {
+                    font-size: 13px;
+                }
+
                 &::before {
                     position: absolute;
                     content: "";
@@ -265,6 +283,12 @@
                     height: 20px;
                     left: -12px;
                     top: 10px;
+
+                    @include responsive (phone) {
+                        scale: 50%;
+                        left: -8px;
+                        top: -1px;
+                    } 
                 }
             }
         }
@@ -290,6 +314,10 @@
             margin-top: 92px;
             @include flex(center, center);
             color: #929699;
+
+            @include responsive (phone) {
+                margin-top: 49px;
+            }
 
             label {
                 position: relative;
@@ -334,5 +362,8 @@
         line-height: 140%;
         color: $color-primary;
 
+        @include responsive (phone) {
+            white-space: nowrap;
+        }
     }
 }
