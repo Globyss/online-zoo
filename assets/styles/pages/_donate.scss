@@ -277,12 +277,12 @@
 
                 &::before {
                     position: absolute;
-                    content: "";
-                    background: url("../../assets/icons/dollar-icon.svg");
+                    content: "$";
+                    font-size: 22px;
+                    // background: url("../../assets/icons/dollar-icon.svg");
                     width: 10px;
                     height: 20px;
                     left: -12px;
-                    top: 10px;
 
                     @include responsive (phone) {
                         scale: 50%;
@@ -291,6 +291,11 @@
                     } 
                 }
             }
+
+            .active {
+                color: $color-orange;
+            }
+    
         }
 
         &__line {
@@ -322,11 +327,12 @@
             label {
                 position: relative;
 
-                input {
+                input[type=number] {
                     background: transparent;
                     font-weight: 400;
                     font-size: 16px;
                     line-height: 140%;
+                    color: #929699;
                     border: 1px solid #929699;
                     border-radius: 2px;    
                     padding: 16px 20px 16px 9px; 

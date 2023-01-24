@@ -135,6 +135,18 @@ input[type=number] {
   }
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 997;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+  height: 100%;
+  width: 100%;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../../assets/fonts/Roboto-Black.woff") format("woff"), url("../../assets/fonts/Roboto-Black.woff2") format("woff2");
@@ -261,9 +273,14 @@ body {
     top: calc(50% + 15px);
   }
 }
+@media (max-width: 1000px) {
+  .animal-card__button {
+    top: calc(50% - 25px);
+  }
+}
 @media (max-width: 999px) {
   .animal-card__button {
-    top: 50%;
+    top: calc(50% - 30px);
   }
 }
 
@@ -317,6 +334,36 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.burger__close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+}
+.burger__close-btn div {
+  position: absolute;
+  top: 14px;
+  left: 3px;
+  background-color: #FE9013;
+  height: 2px;
+  width: 24px;
+  border-radius: 2px;
+  rotate: 45deg;
+}
+.burger__close-btn div::after {
+  background-color: #FE9013;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  content: "";
+  height: 2px;
+  width: 24px;
+  border-radius: 2px;
+  rotate: 90deg;
 }
 
 .footer {
@@ -559,7 +606,7 @@ body {
 
 .header {
   position: sticky;
-  z-index: 999;
+  z-index: 998;
   background-color: black;
   backdrop-filter: blur(2px);
   color: white;
@@ -654,14 +701,14 @@ body {
   height: 10px;
   background-color: transparent;
 }
-.burger__menu {
+.burger__icon {
   height: 2px;
   width: 18px;
   background: white;
   border-radius: 2px;
   position: relative;
 }
-.burger__menu::before {
+.burger__icon::before {
   content: "";
   height: 2px;
   width: 18px;
@@ -671,7 +718,7 @@ body {
   top: -4px;
   left: 0px;
 }
-.burger__menu::after {
+.burger__icon::after {
   content: "";
   height: 2px;
   width: 18px;
@@ -680,6 +727,40 @@ body {
   position: absolute;
   top: 4px;
   left: 0px;
+}
+.burger__menu {
+  display: none;
+  z-index: 999;
+  background-color: white;
+  width: 100%;
+  height: 329px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  padding: 10px;
+}
+.burger__menu .logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: #FE9013;
+  width: 66px;
+  height: 42px;
+  border: 0.8px solid #FE9013;
+  border-radius: 2px;
+}
+.burger__menu .logo__image {
+  position: absolute;
+  left: 10px;
+  bottom: 6px;
+}
+.burger__menu .logo__text {
+  text-align: center;
+  font-style: normal;
+  font-weight: normal !important;
+  font-size: 15px !important;
+  line-height: 120%;
 }
 @media (max-width: 640px) {
   .burger {
@@ -711,6 +792,22 @@ body {
 }
 .nav-list__item :hover {
   color: #f9804b;
+}
+
+.burger-nav {
+  margin-top: 30px;
+}
+.burger-nav__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+.burger-nav__item {
+  font-size: 16px;
+  line-height: 140%;
+  color: #333b41;
 }
 
 .banner {
@@ -1000,12 +1097,11 @@ body {
 }
 .pick-and-feed .progress-bar__point .price::before {
   position: absolute;
-  content: "";
-  background: url("../../assets/icons/dollar-icon.svg");
+  content: "$";
+  font-size: 22px;
   width: 10px;
   height: 20px;
   left: -12px;
-  top: 10px;
 }
 @media (max-width: 320px) {
   .pick-and-feed .progress-bar__point .price::before {
@@ -1013,6 +1109,9 @@ body {
     left: -8px;
     top: -1px;
   }
+}
+.pick-and-feed .progress-bar__point .active {
+  color: #FE9013;
 }
 .pick-and-feed .progress-bar__line {
   z-index: -1;
@@ -1043,18 +1142,19 @@ body {
 .pick-and-feed .progress-bar__input label {
   position: relative;
 }
-.pick-and-feed .progress-bar__input label input {
+.pick-and-feed .progress-bar__input label input[type=number] {
   background: transparent;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
+  color: #929699;
   border: 1px solid #929699;
   border-radius: 2px;
   padding: 16px 20px 16px 9px;
   width: 268px;
 }
 @media (max-width: 640px) {
-  .pick-and-feed .progress-bar__input label input {
+  .pick-and-feed .progress-bar__input label input[type=number] {
     padding: 10px 20px 10px 6px;
     width: 180px;
   }

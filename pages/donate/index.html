@@ -8,6 +8,7 @@
     <title>Online-zoo-donate</title>
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="header">
         <div class="container">
             <a class="logo" href="../main/index.html">
@@ -38,8 +39,39 @@
                 href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
                 >Designed by &copy;</a>
             </div>
-            <button class="burger">
-                <div class="burger__menu"></div>
+            <button type="button" class="burger">
+                <div class="burger__icon"></div>
+                <div class="burger__menu">
+                    <a class="logo">
+                        <object class="logo__image" type="image/svg+xml" data="../../assets/icons/bamboo-orange.svg">
+                            Your browser does not support SVG
+                         </object>
+                        <h1 class="logo__text">PetStory online</h1>
+                    </a>
+                    <nav class="burger-nav">
+                        <ul class="burger-nav__list">
+                            <li class="burger-nav__item">
+                                <a href="#">About</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Map</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Zoos</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Donate</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Contact us</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Designed by ©</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="burger__close-btn"><div></div></a>
+                </div>
             </button>
         </div>
     </div>
@@ -116,7 +148,7 @@
                             </div>
                             <div class="progress-bar__input">
                                 <label for="amount">
-                                    <input name="amount" placeholder="Another amount" type="number" min="0" max="9999" maxlength="4">
+                                    <input name="amount" value="100" placeholder="Another amount" type="number" min="0" max="9999" maxlength="4">
                                     <p>$</p>
                                 </label>
                             </div>
@@ -208,5 +240,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

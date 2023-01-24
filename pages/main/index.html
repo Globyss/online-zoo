@@ -8,6 +8,7 @@
     <title>Online-zoo</title>
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="header">
         <div class="container">
             <a class="logo" href="# ">
@@ -38,8 +39,39 @@
                 href="https://www.figma.com/file/jfEFwkXVj1WRq7sUHDr8os/PetStory-online"
                 >Designed by &copy;</a>
             </div>
-            <button class="burger">
-                <div class="burger__menu"></div>
+            <button type="button" class="burger">
+                <div class="burger__icon"></div>
+                <div class="burger__menu">
+                    <a class="logo">
+                        <object class="logo__image" type="image/svg+xml" data="../../assets/icons/bamboo-orange.svg">
+                            Your browser does not support SVG
+                         </object>
+                        <h1 class="logo__text">PetStory online</h1>
+                    </a>
+                    <nav class="burger-nav">
+                        <ul class="burger-nav__list">
+                            <li class="burger-nav__item">
+                                <a href="#">About</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Map</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Zoos</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Donate</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Contact us</a>
+                            </li>
+                            <li class="burger-nav__item">
+                                <a href="#">Designed by ©</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="burger__close-btn"><div></div></a>
+                </div>
             </button>
         </div>
     </div>
@@ -77,99 +109,103 @@
     </section>
     <section class="animals-card">
         <div class="container">
-            <div class="animals-card__list">
-                <div class="animals-card__item animals-card__item_hidden">
-                    <div class="overlay"></div>
-                    <div class="animals-card__image">
-                        <img src="../../assets/images/animal cards/1.png" alt="animal card image">
-                    </div>
-                    <div class="animals-card__description">
-                        <div class="animals-card__content">
-                            <h3 class="animals-card__title">giant Pandas</h3>
-                            <div class="animals-card__subtitle">Native to Southwest China</div>
+            <div class="js-carousel">
+                <div class="hide-list">
+                    <div class="animals-card__list">
+                        <div class="animals-card__item animals-card__item_hidden">
+                            <div class="card-overlay"></div>
+                            <div class="animals-card__image">
+                                <img src="../../assets/images/animal cards/1.png" alt="animal card image">
+                            </div>
+                            <div class="animals-card__description">
+                                <div class="animals-card__content">
+                                    <h3 class="animals-card__title">giant Pandas</h3>
+                                    <div class="animals-card__subtitle">Native to Southwest China</div>
+                                </div>
+                                <div class="animals-card__icon">
+                                    <img src="../../assets/icons/food/banana-bamboo_icon.svg" alt="icon">
+                                </div>
+                            </div>
                         </div>
-                        <div class="animals-card__icon">
-                            <img src="../../assets/icons/food/banana-bamboo_icon.svg" alt="icon">
+                        <div class="animals-card__item animals-card__item_hidden">
+                            <div class="card-overlay"></div>
+                            <div class="animals-card__image">
+                                <img src="../../assets/images/animal cards/2.png" alt="animal card image">
+                            </div>
+                            <div class="animals-card__description">
+                                <div class="animals-card__content">
+                                    <h3 class="animals-card__title">Eagles</h3>
+                                    <div class="animals-card__subtitle">Native to South America</div>
+                                </div>
+                                <div class="animals-card__icon">
+                                    <img src="../../assets/icons/food/meet-fish_icon.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animals-card__item">
+                            <div class="card-overlay"></div>
+                            <div class="animals-card__image">
+                                <img src="../../assets/images/animal cards/3.png" alt="animal card image">
+                            </div>
+                            <div class="animals-card__description">
+                                <div class="animals-card__content">
+                                    <h3 class="animals-card__title">Gorillas</h3>
+                                    <div class="animals-card__subtitle">Native to Congo</div>
+                                </div>
+                                <div class="animals-card__icon">
+                                    <img src="../../assets/icons/food/banana-bamboo_icon.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animals-card__item">
+                            <div class="card-overlay"></div>
+                            <div class="animals-card__image">
+                                <img src="../../assets/images/animal cards/4.png" alt="animal card image">
+                            </div>
+                            <div class="animals-card__description">
+                                <div class="animals-card__content">
+                                    <h3 class="animals-card__title">Two-toed Sloth</h3>
+                                    <div class="animals-card__subtitle">Mesoamerica, South America</div>
+                                </div>
+                                <div class="animals-card__icon">
+                                    <img src="../../assets/icons/food/banana-bamboo_icon.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animals-card__item">
+                            <div class="card-overlay"></div>
+                            <div class="animals-card__image">
+                                <img src="../../assets/images/animal cards/5.png" alt="animal card image">
+                            </div>
+                            <div class="animals-card__description">
+                                <div class="animals-card__content">
+                                    <h3 class="animals-card__title">cheetahs</h3>
+                                    <div class="animals-card__subtitle">Native to Africa</div>
+                                </div>
+                                <div class="animals-card__icon">
+                                    <img src="../../assets/icons/food/meet-fish_icon.svg" alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="animals-card__item">
+                            <div class="card-overlay"></div>
+                            <div class="animals-card__image">
+                                <img src="../../assets/images/animal cards/6.png" alt="animal card image">
+                            </div>
+                            <div class="animals-card__description">
+                                <div class="animals-card__content">
+                                    <h3 class="animals-card__title">Penguins</h3>
+                                    <div class="animals-card__subtitle">Native to Antarctica</div>
+                                </div>
+                                <div class="animals-card__icon">
+                                    <img src="../../assets/icons/food/meet-fish_icon.svg" alt="icon">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="animals-card__item animals-card__item_hidden">
-                    <div class="overlay"></div>
-                    <div class="animals-card__image">
-                        <img src="../../assets/images/animal cards/2.png" alt="animal card image">
-                    </div>
-                    <div class="animals-card__description">
-                        <div class="animals-card__content">
-                            <h3 class="animals-card__title">Eagles</h3>
-                            <div class="animals-card__subtitle">Native to South America</div>
-                        </div>
-                        <div class="animals-card__icon">
-                            <img src="../../assets/icons/food/meet-fish_icon.svg" alt="icon">
-                        </div>
-                    </div>
-                </div>
-                <div class="animals-card__item">
-                    <div class="overlay"></div>
-                    <div class="animals-card__image">
-                        <img src="../../assets/images/animal cards/3.png" alt="animal card image">
-                    </div>
-                    <div class="animals-card__description">
-                        <div class="animals-card__content">
-                            <h3 class="animals-card__title">Gorillas</h3>
-                            <div class="animals-card__subtitle">Native to Congo</div>
-                        </div>
-                        <div class="animals-card__icon">
-                            <img src="../../assets/icons/food/banana-bamboo_icon.svg" alt="icon">
-                        </div>
-                    </div>
-                </div>
-                <div class="animals-card__item">
-                    <div class="overlay"></div>
-                    <div class="animals-card__image">
-                        <img src="../../assets/images/animal cards/4.png" alt="animal card image">
-                    </div>
-                    <div class="animals-card__description">
-                        <div class="animals-card__content">
-                            <h3 class="animals-card__title">Two-toed Sloth</h3>
-                            <div class="animals-card__subtitle">Mesoamerica, South America</div>
-                        </div>
-                        <div class="animals-card__icon">
-                            <img src="../../assets/icons/food/banana-bamboo_icon.svg" alt="icon">
-                        </div>
-                    </div>
-                </div>
-                <div class="animals-card__item">
-                    <div class="overlay"></div>
-                    <div class="animals-card__image">
-                        <img src="../../assets/images/animal cards/5.png" alt="animal card image">
-                    </div>
-                    <div class="animals-card__description">
-                        <div class="animals-card__content">
-                            <h3 class="animals-card__title">cheetahs</h3>
-                            <div class="animals-card__subtitle">Native to Africa</div>
-                        </div>
-                        <div class="animals-card__icon">
-                            <img src="../../assets/icons/food/meet-fish_icon.svg" alt="icon">
-                        </div>
-                    </div>
-                </div>
-                <div class="animals-card__item">
-                    <div class="overlay"></div>
-                    <div class="animals-card__image">
-                        <img src="../../assets/images/animal cards/6.png" alt="animal card image">
-                    </div>
-                    <div class="animals-card__description">
-                        <div class="animals-card__content">
-                            <h3 class="animals-card__title">Penguins</h3>
-                            <div class="animals-card__subtitle">Native to Antarctica</div>
-                        </div>
-                        <div class="animals-card__icon">
-                            <img src="../../assets/icons/food/meet-fish_icon.svg" alt="icon">
-                        </div>
-                    </div>
-                </div>
-                <button class="animal-card__button animal-card__button-left"></button>
-                <button class="animal-card__button animal-card__button-right"></button>
+            </div>
+            <button class="animal-card__button animal-card__button-left"></button>
+            <button class="animal-card__button animal-card__button-right"></button>
             </div>
             <a href="#" class="button button_pill">choose your favorite</a>
         </div>
@@ -219,7 +255,7 @@
                     <h3>Testimonials</h3>
                 </div>
                 <div class="testimonials__list">
-                    <div class="testimonials__item testimonials__item_hidden">
+                    <div class="testimonials__item">
                         <div class="testimonials__header">
                             <img src="../../assets/icons/user icons/user_icon.png" class="testimonials__image" alt="author image">
                             <div class="testimonials__user-info">
@@ -301,7 +337,7 @@
                 </div>
             </div>
             <div class="testimonials__scroll">
-                <div class="progress"></div>
+                <input class="progress" type="range" value="0" step="1" min="0" max="7">
             </div>
             <a href="#" class="button button_rounded">leave feedback</a>
             <img src="../../assets/images/plants/leaf.png" class="leaf-decoration" alt="leaf">
@@ -375,5 +411,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

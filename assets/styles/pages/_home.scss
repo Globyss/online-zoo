@@ -263,7 +263,6 @@
         padding-right: 0px;
     }
 
-
     .container {
         @include flex;
         flex-direction: column;
@@ -282,11 +281,20 @@
         }
     }
 
+    .hide-list {
+        overflow: hidden;
+    }
+    
+    .js-carousel {
+        position: relative;
+        margin-bottom: 60px;
+    }
+
     &__list {
         @include flex(center, space-between);
         flex-wrap: wrap;
         position: relative;
-        margin-bottom: 60px;
+        transition: .5s;
 
         @media (min-width: 1601px) {
             margin: 0 160px 0 135px;
@@ -315,6 +323,7 @@
         margin-bottom: 20px;
         position: relative;
         overflow: hidden;
+        transition: 1s;
         
         @include responsive(1439) {
             margin: 92px 0 0 0;
@@ -328,15 +337,13 @@
             margin: 20px 0 0 0;
         }
 
-        
-
         &:hover { 
             .animals-card__image img{
                 transition: 0.5s;
                 transform: scale(110%);
                 z-index: 1;
             }
-            .overlay{
+            .card-overlay{
                 z-index: 999;
                 position: absolute;
                 border-radius: 5px;
@@ -476,6 +483,10 @@
     .container {
         @include flex;
         flex-direction: column;
+
+        @include responsive (tab) {
+            width: 100%;
+        }
     }
 
     &__content {
@@ -493,7 +504,7 @@
         }
        
         @include responsive (tab) {
-            width: 100vw;
+            // width: 100vw;
             margin-top: 20px;
             margin-bottom: 20px;
             padding-left: 20px;
@@ -778,37 +789,39 @@
 
     &__list {
         @include flex(flex-start, space-between);
-        gap: 30px;
+        gap: 29px;
         overflow: hidden;
+        max-width: 100%;
 
         @include responsive (tab) {
             align-items: center;
             flex-direction: column;
+            gap: 15px;
+
         }
      }
 
     &__item {
-        width: 268px;
+        min-width: 268px;
         height: 391px;
         background: #F1F3F2;
         border-radius: 20px;
         border: solid 2px #FEBDABBD;
         padding-bottom: 8px;
         overflow-y: hidden;
+        flex-basis: 25%;
+        transition: 0.5s;
 
-        @include responsive (sm-desktop){
-            flex-grow: 1;
-            &_hidden {
-                display: none;
-            }
+        @include responsive(1439) {
+            flex-basis: 31%;
+            flex-shrink: 0;
         }
 
         @include responsive (tab) {
             width: 100%;
             height: 110px;
+            cursor: pointer;
         }
-
-        
     }
 
     &__header {
@@ -869,15 +882,10 @@
     }
 
     &__scroll {
-        width: 600px;
-        height: 8px;
-        position: relative;
-        background: #F5F7F6;
-        border-radius: 5px;
-        border: 0.5px solid #FEBDABBD;
         margin: 21px auto 31px auto;
-        cursor: pointer;
-
+        text-align: center;
+        @include flex(center,center);
+        
         @include responsive (sm-desktop) {
             margin: 20px auto 52px auto;
         }
@@ -887,11 +895,30 @@
         }
 
         .progress {
-            width: 116px;
-            height: 6px;
-            position: absolute;
-            background: #FE9013;
-            border-radius: 5px;
+            width: 600px;
+        }
+
+        input[type=range] {
+            -webkit-appearance: none;
+        }
+        input[type=range]:focus {
+          outline: none;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 8px;
+          cursor: pointer;
+          background: #F5F7F6;
+          border-radius: 4px;
+          border: 1px solid $color-orange;
+        }
+        input[type=range]::-webkit-slider-thumb {
+          height: 6px;
+          width: calc(100% / 7);
+          border-radius: 4px;
+          background: $color-orange ;
+          cursor: pointer;
+          -webkit-appearance: none;
         }
     }
 }
